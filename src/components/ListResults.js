@@ -12,7 +12,7 @@ export default class ListResults extends React.Component {
                     data={this.props.newData}
                     keyExtractor={key => key.id.toString()} 
                     renderItem={({item, key}) => 
-                        <Card key={key} movieTitle={item.title} releaseDate={item.release_date}/>
+                        <Card key={key} movie={item}/>
                     }
                 />
             </View>

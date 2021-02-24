@@ -6,7 +6,8 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars: The Last Jedi",
         overview:"Nouvel épisode de la saga. Les héros du Réveil de la force rejoignent les figures légendaires de la galaxie dans une aventure épique qui révèle des secrets ancestraux sur la Force et entraîne de choquantes révélations sur le passé…",
-        release_date:"2017-12-13"
+        release_date:"2017-12-13",
+        img:'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
     },
     {
         id:1,
@@ -15,7 +16,8 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars",
         overview:"Il y a bien longtemps, dans une galaxie très lointaine... La guerre civile fait rage entre l'Empire galactique et l'Alliance rebelle. Capturée par les troupes de choc de l'Empereur menées par le sombre et impitoyable Dark Vador, la princesse Leia Organa dissimule les plans de l’Étoile Noire, une station spatiale invulnérable, à son droïde R2-D2 avec pour mission de les remettre au Jedi Obi-Wan Kenobi. Accompagné de son fidèle compagnon, le droïde de protocole C-3PO, R2-D2 s'échoue sur la planète Tatooine et termine sa quête chez le jeune Luke Skywalker. Rêvant de devenir pilote mais confiné aux travaux de la ferme, ce dernier se lance à la recherche de ce mystérieux Obi-Wan Kenobi, devenu ermite au cœur des montagnes désertiques de Tatooine...",
-        release_date:"1977-05-25"
+        release_date:"1977-05-25",
+        img:'http://antreducinema.fr/wp-content/uploads/2020/04/La_Guerre_des_Etoiles.png',
     },
     {
         id:3,
@@ -24,7 +26,8 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars: The Last Jedi",
         overview:"Nouvel épisode de la saga. Les héros du Réveil de la force rejoignent les figures légendaires de la galaxie dans une aventure épique qui révèle des secrets ancestraux sur la Force et entraîne de choquantes révélations sur le passé…",
-        release_date:"2017-12-13"
+        release_date:"2017-12-13",
+        img:'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
     },
     {
         id:4,
@@ -33,7 +36,8 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars",
         overview:"Il y a bien longtemps, dans une galaxie très lointaine... La guerre civile fait rage entre l'Empire galactique et l'Alliance rebelle. Capturée par les troupes de choc de l'Empereur menées par le sombre et impitoyable Dark Vador, la princesse Leia Organa dissimule les plans de l’Étoile Noire, une station spatiale invulnérable, à son droïde R2-D2 avec pour mission de les remettre au Jedi Obi-Wan Kenobi. Accompagné de son fidèle compagnon, le droïde de protocole C-3PO, R2-D2 s'échoue sur la planète Tatooine et termine sa quête chez le jeune Luke Skywalker. Rêvant de devenir pilote mais confiné aux travaux de la ferme, ce dernier se lance à la recherche de ce mystérieux Obi-Wan Kenobi, devenu ermite au cœur des montagnes désertiques de Tatooine...",
-        release_date:"1977-05-25"
+        release_date:"1977-05-25",
+        img:'http://antreducinema.fr/wp-content/uploads/2020/04/La_Guerre_des_Etoiles.png',
     },
     {
         id:5,
@@ -42,7 +46,8 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars: The Last Jedi",
         overview:"Nouvel épisode de la saga. Les héros du Réveil de la force rejoignent les figures légendaires de la galaxie dans une aventure épique qui révèle des secrets ancestraux sur la Force et entraîne de choquantes révélations sur le passé…",
-        release_date:"2017-12-13"
+        release_date:"2017-12-13",
+        img:'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
     },
     {
         id:6,
@@ -51,7 +56,8 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars",
         overview:"Il y a bien longtemps, dans une galaxie très lointaine... La guerre civile fait rage entre l'Empire galactique et l'Alliance rebelle. Capturée par les troupes de choc de l'Empereur menées par le sombre et impitoyable Dark Vador, la princesse Leia Organa dissimule les plans de l’Étoile Noire, une station spatiale invulnérable, à son droïde R2-D2 avec pour mission de les remettre au Jedi Obi-Wan Kenobi. Accompagné de son fidèle compagnon, le droïde de protocole C-3PO, R2-D2 s'échoue sur la planète Tatooine et termine sa quête chez le jeune Luke Skywalker. Rêvant de devenir pilote mais confiné aux travaux de la ferme, ce dernier se lance à la recherche de ce mystérieux Obi-Wan Kenobi, devenu ermite au cœur des montagnes désertiques de Tatooine...",
-        release_date:"1977-05-25"
+        release_date:"1977-05-25",
+        img:'http://antreducinema.fr/wp-content/uploads/2020/04/La_Guerre_des_Etoiles.png',
     },
     {
         id:7,
@@ -60,7 +66,8 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars: The Last Jedi",
         overview:"Nouvel épisode de la saga. Les héros du Réveil de la force rejoignent les figures légendaires de la galaxie dans une aventure épique qui révèle des secrets ancestraux sur la Force et entraîne de choquantes révélations sur le passé…",
-        release_date:"2017-12-13"
+        release_date:"2017-12-13",
+        img:'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
     },
     {
         id:8,
@@ -69,7 +76,8 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars",
         overview:"Il y a bien longtemps, dans une galaxie très lointaine... La guerre civile fait rage entre l'Empire galactique et l'Alliance rebelle. Capturée par les troupes de choc de l'Empereur menées par le sombre et impitoyable Dark Vador, la princesse Leia Organa dissimule les plans de l’Étoile Noire, une station spatiale invulnérable, à son droïde R2-D2 avec pour mission de les remettre au Jedi Obi-Wan Kenobi. Accompagné de son fidèle compagnon, le droïde de protocole C-3PO, R2-D2 s'échoue sur la planète Tatooine et termine sa quête chez le jeune Luke Skywalker. Rêvant de devenir pilote mais confiné aux travaux de la ferme, ce dernier se lance à la recherche de ce mystérieux Obi-Wan Kenobi, devenu ermite au cœur des montagnes désertiques de Tatooine...",
-        release_date:"1977-05-25"
+        release_date:"1977-05-25",
+        img:'http://antreducinema.fr/wp-content/uploads/2020/04/La_Guerre_des_Etoiles.png',
     },
     {
         id:9,
@@ -78,7 +86,8 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars: The Last Jedi",
         overview:"Nouvel épisode de la saga. Les héros du Réveil de la force rejoignent les figures légendaires de la galaxie dans une aventure épique qui révèle des secrets ancestraux sur la Force et entraîne de choquantes révélations sur le passé…",
-        release_date:"2017-12-13"
+        release_date:"2017-12-13",
+        img:'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
     },
     {
         id:10,
@@ -87,7 +96,8 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars",
         overview:"Il y a bien longtemps, dans une galaxie très lointaine... La guerre civile fait rage entre l'Empire galactique et l'Alliance rebelle. Capturée par les troupes de choc de l'Empereur menées par le sombre et impitoyable Dark Vador, la princesse Leia Organa dissimule les plans de l’Étoile Noire, une station spatiale invulnérable, à son droïde R2-D2 avec pour mission de les remettre au Jedi Obi-Wan Kenobi. Accompagné de son fidèle compagnon, le droïde de protocole C-3PO, R2-D2 s'échoue sur la planète Tatooine et termine sa quête chez le jeune Luke Skywalker. Rêvant de devenir pilote mais confiné aux travaux de la ferme, ce dernier se lance à la recherche de ce mystérieux Obi-Wan Kenobi, devenu ermite au cœur des montagnes désertiques de Tatooine...",
-        release_date:"1977-05-25"
+        release_date:"1977-05-25",
+        img:'http://antreducinema.fr/wp-content/uploads/2020/04/La_Guerre_des_Etoiles.png',
     },
     {
         id:11,
@@ -96,7 +106,8 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars",
         overview:"Il y a bien longtemps, dans une galaxie très lointaine... La guerre civile fait rage entre l'Empire galactique et l'Alliance rebelle. Capturée par les troupes de choc de l'Empereur menées par le sombre et impitoyable Dark Vador, la princesse Leia Organa dissimule les plans de l’Étoile Noire, une station spatiale invulnérable, à son droïde R2-D2 avec pour mission de les remettre au Jedi Obi-Wan Kenobi. Accompagné de son fidèle compagnon, le droïde de protocole C-3PO, R2-D2 s'échoue sur la planète Tatooine et termine sa quête chez le jeune Luke Skywalker. Rêvant de devenir pilote mais confiné aux travaux de la ferme, ce dernier se lance à la recherche de ce mystérieux Obi-Wan Kenobi, devenu ermite au cœur des montagnes désertiques de Tatooine...",
-        release_date:"1977-05-25"
+        release_date:"1977-05-25",
+        img:'http://antreducinema.fr/wp-content/uploads/2020/04/La_Guerre_des_Etoiles.png',
     },
     {
         id:12,
@@ -105,7 +116,8 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars: The Last Jedi",
         overview:"Nouvel épisode de la saga. Les héros du Réveil de la force rejoignent les figures légendaires de la galaxie dans une aventure épique qui révèle des secrets ancestraux sur la Force et entraîne de choquantes révélations sur le passé…",
-        release_date:"2017-12-13"
+        release_date:"2017-12-13",
+        img:'https://images-na.ssl-images-amazon.com/images/I/71c-O3GaxLL._AC_SL1200_.jpg',
     },
     {
         id:13,
@@ -114,6 +126,17 @@ export default data = [
         poster_path:"",
         original_title:"Star Wars",
         overview:"Il y a bien longtemps, dans une galaxie très lointaine... La guerre civile fait rage entre l'Empire galactique et l'Alliance rebelle. Capturée par les troupes de choc de l'Empereur menées par le sombre et impitoyable Dark Vador, la princesse Leia Organa dissimule les plans de l’Étoile Noire, une station spatiale invulnérable, à son droïde R2-D2 avec pour mission de les remettre au Jedi Obi-Wan Kenobi. Accompagné de son fidèle compagnon, le droïde de protocole C-3PO, R2-D2 s'échoue sur la planète Tatooine et termine sa quête chez le jeune Luke Skywalker. Rêvant de devenir pilote mais confiné aux travaux de la ferme, ce dernier se lance à la recherche de ce mystérieux Obi-Wan Kenobi, devenu ermite au cœur des montagnes désertiques de Tatooine...",
-        release_date:"1977-05-25"
+        release_date:"1977-05-25",
+        img:'http://antreducinema.fr/wp-content/uploads/2020/04/La_Guerre_des_Etoiles.png',
+    },
+    {
+        id:14,
+        vote_average:8.1,
+        title:"Matrix",
+        poster_path:"",
+        original_title:"Matrix",
+        overview:"Thomas A. Anderson, un jeune informaticien connu dans le monde du hacking sous le pseudonyme de Neo18, est contacté via son ordinateur par ce qu’il pense être un groupe de hackers. Ils lui font découvrir que le monde dans lequel il vit n’est qu’un monde virtuel dans lequel les êtres humains sont gardés inconsciemment sous contrôle.",
+        release_date:"1999-06-23",
+        img:'https://cineluctable.files.wordpress.com/2019/09/matrix.jpg',
     },
 ]
