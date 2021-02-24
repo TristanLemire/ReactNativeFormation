@@ -10,7 +10,7 @@ export default class Search extends React.Component {
           <Icon name="search" />
           <TextInput
             style={styles.textinput}
-            placeholder="Movie Title"
+            placeholder="Titre du film"
             onChangeText={(text) =>
               text.length >= 3
                 ? this.props.setSearchMovieTitle(text)
