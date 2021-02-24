@@ -7,7 +7,7 @@ import data from "./src/helpers/filmDatas"
 export default function App() {
   const [searchMovieTitle, setSearchMovieTitle] = useState("")
 
-    const newData = data.filter(datum => searchMovieTitle !== "" ? datum.title.toUpperCase().includes(searchMovieTitle.toUpperCase()) : null);
+    const newData = data.filter(datum => searchMovieTitle !== "" ? datum.title.toUpperCase().includes(searchMovieTitle.toUpperCase()) : datum.title);
 
   
   return (
