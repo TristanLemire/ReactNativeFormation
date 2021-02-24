@@ -3,6 +3,7 @@ import { TouchableHighlight, View } from "react-native";
 import React from "react";
 import { Text, StyleSheet, Image } from "react-native";
 import { Icon } from "react-native-elements";
+import { Rating, AirbnbRating } from "react-native-elements";
 
 export const Card = ({ movie }) => {
   return (
@@ -34,9 +35,14 @@ export const Card = ({ movie }) => {
         <View style={styles.desc}>
           <Text style={styles.movieTitle}>{movie.original_title}</Text>
           <Text style={styles.releaseDate}>{movie.release_date}</Text>
-          {movie.vote_average >= 7 && (
-            <Icon style={styles.iconStar} name="star" />
-          )}
+          <Rating
+            type="heart"
+            readonly={true}
+            ratingCount={5}
+            startingValue={movie.vote_average / 2}
+            imageSize={25}
+            style={{ paddingVertical: 5 }}
+          />
         </View>
       </View>
     </TouchableHighlight>
