@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import ListResults from "../ListResults";
 import Search from "../Search";
 import { Text, StyleSheet, StatusBar } from "react-native";
-
-export const API_KEY = "026890b0945cbc402813edbeb90f0223";
-export const BASE_URL = "https://api.themoviedb.org/3/";
+import {
+  getSearchedMoviesByTitle,
+  getTopRatedMovies,
+} from "../../services/network";
 
 const SearchScreen = () => {
   const [searchMovieTitle, setSearchMovieTitle] = useState("");
@@ -14,43 +15,31 @@ const SearchScreen = () => {
   const [totalPage, setTotalPage] = useState(0);
 
   useEffect(() => {
-    searchMovieTitle != "" ? getSearchedMoviesByTitle() : getTopRatedMovies();
+    if (searchMovieTitle !== "") {
+      getSearchedMoviesByTitle(searchMovieTitle, currPage).then((response) => {
+        setMovies(response.results);
+        setTotalPage(response.total_pages);
+      });
+    } else {
+      fetchMovies(currPage);
+    }
   }, [setSearchMovieTitle]);
 
-  const getSearchedMoviesByTitle = () => {
-    fetch(
-      `${BASE_URL}search/movie?api_key=${API_KEY}&query=${searchMovieTitle}&language=fr-FR&include_adult=false&page=1`
-    )
-      .then((response) => response.json())
-      .then((json) => {
-        setMovies(json.results);
-      })
-      .catch((error) => {
-        setError(error.error);
-      });
-  };
-
-  const getTopRatedMovies = () => {
-    fetch(
-      `${BASE_URL}movie/top_rated?api_key=${API_KEY}&language=fr-FR&page=${currPage}`
-    )
-      .then((response) => response.json())
-      .then((json) => {
-        setMovies([...movies, ...json.results]);
-        setTotalPage(json.total_pages);
-        console.log(movies);
-      })
-      .catch((error) => {
-        setError(error.error);
-      });
+  const fetchMovies = (currPage) => {
+    getTopRatedMovies(currPage).then((response) => {
+      console.log(response);
+      setMovies([...movies, ...response.results]);
+      setTotalPage(response.total_pages);
+    });
   };
 
   const onReachedEnd = () => {
     const incrementedPage = currPage + 1;
     setCurrPage(incrementedPage);
+    console.log("hello");
 
     if (incrementedPage <= totalPage) {
-      getTopRatedMovies();
+      fetchMovies(incrementedPage);
     }
   };
 
