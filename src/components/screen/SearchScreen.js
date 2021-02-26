@@ -1,11 +1,12 @@
-import ListResults from "../components/ListResults";
-import Search from "../components/Search";
-import { Text, StyleSheet } from "react-native";
+import React, { useState, useEffect } from "react";
+import ListResults from "../ListResults";
+import Search from "../Search";
+import { Text, StyleSheet, StatusBar } from "react-native";
 
 export const API_KEY = "026890b0945cbc402813edbeb90f0223";
 export const BASE_URL = "https://api.themoviedb.org/3/";
 
-export const SearchScreen = ({ navigation: { navigation } }) => {
+const SearchScreen = () => {
   const [searchMovieTitle, setSearchMovieTitle] = useState("");
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
@@ -55,6 +56,7 @@ export const SearchScreen = ({ navigation: { navigation } }) => {
 
   return (
     <>
+      <StatusBar barStyle={"light-content"}></StatusBar>
       <Search setSearchMovieTitle={setSearchMovieTitle} />
       {error === null ? (
         <ListResults movies={movies} onReached={onReachedEnd} />
@@ -75,3 +77,5 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 });
+
+export default SearchScreen;
