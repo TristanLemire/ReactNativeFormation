@@ -2,8 +2,7 @@ import { TouchableHighlight, View } from "react-native";
 
 import React from "react";
 import { Text, StyleSheet, Image } from "react-native";
-import { Icon } from "react-native-elements";
-import { Rating, AirbnbRating } from "react-native-elements";
+import { Rating } from "react-native-elements";
 
 export const Card = ({ movie }) => {
   return (
