@@ -16,19 +16,27 @@ const SearchScreen = () => {
 
   useEffect(() => {
     if (searchMovieTitle !== "") {
-      getSearchedMoviesByTitle(searchMovieTitle, currPage).then((response) => {
+      getSearchedMoviesByTitle(searchMovieTitle, 1).then((response) => {
         setMovies(response.results);
         setTotalPage(response.total_pages);
       });
     } else {
-      fetchMovies(currPage);
+      resetMovies();
+      fetchMovies(1, true);
     }
-  }, [setSearchMovieTitle]);
+  }, [searchMovieTitle]);
 
-  const fetchMovies = (currPage) => {
+  const resetMovies = () => {
+    setMovies([]);
+    setCurrPage(1);
+  };
+
+  const fetchMovies = (currPage, shouldResetMovies) => {
     getTopRatedMovies(currPage).then((response) => {
       console.log(response);
-      setMovies([...movies, ...response.results]);
+      setMovies(
+        shouldResetMovies ? response.results : [...movies, ...response.results]
+      );
       setTotalPage(response.total_pages);
     });
   };
