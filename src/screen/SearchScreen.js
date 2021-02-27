@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
-import ListResults from "../ListResults";
-import Search from "../Search";
-import { Text, StyleSheet, StatusBar } from "react-native";
+import ListResults from "../components/ListResults";
+import Search from "../components/Search";
+import { Text, StyleSheet, StatusBar, SafeAreaView } from "react-native";
 import {
   getSearchedMoviesByTitle,
   getTopRatedMovies,
-} from "../../services/network";
+} from "../services/network";
 
-const SearchScreen = () => {
+export const SearchScreen = ({ navigation }) => {
   const [searchMovieTitle, setSearchMovieTitle] = useState("");
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [currPage, setCurrPage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
+  const [isLoading, setIsloading] = useState(false);
 
   useEffect(() => {
     if (searchMovieTitle !== "") {
@@ -32,19 +33,19 @@ const SearchScreen = () => {
   };
 
   const fetchMovies = (currPage, shouldResetMovies) => {
+    setIsloading(true);
     getTopRatedMovies(currPage).then((response) => {
-      console.log(response);
       setMovies(
         shouldResetMovies ? response.results : [...movies, ...response.results]
       );
       setTotalPage(response.total_pages);
+      setIsloading(false);
     });
   };
 
   const onReachedEnd = () => {
     const incrementedPage = currPage + 1;
     setCurrPage(incrementedPage);
-    console.log("hello");
 
     if (incrementedPage <= totalPage) {
       fetchMovies(incrementedPage);
@@ -53,13 +54,16 @@ const SearchScreen = () => {
 
   return (
     <>
-      <StatusBar barStyle={"light-content"}></StatusBar>
-      <Search setSearchMovieTitle={setSearchMovieTitle} />
-      {error === null ? (
-        <ListResults movies={movies} onReached={onReachedEnd} />
-      ) : (
-        <Text style={styles.error}>{error}</Text>
-      )}
+      <SafeAreaView style={{ flex: 0, backgroundColor: "#FD6E58" }} />
+      <SafeAreaView style={{ flex: 1 }}>
+        <StatusBar barStyle={"light-content"} />
+        <Search setSearchMovieTitle={setSearchMovieTitle} />
+        {error === null ? (
+          <ListResults movies={movies} onReached={onReachedEnd} itemClicked={(id) => navigation.navigate('Details', {id : id})} isLoading={isLoading} />
+        ) : (
+          <Text style={styles.error}>{error}</Text>
+        )}
+      </SafeAreaView>
     </>
   );
 };
@@ -74,5 +78,3 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
 });
-
-export default SearchScreen;

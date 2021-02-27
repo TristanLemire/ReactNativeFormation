@@ -1,14 +1,8 @@
 import React from "react";
-import { SafeAreaView } from "react-native";
-import SearchScreen from "./src/components/screen/SearchScreen";
+import Navigation from './src/navigation/Navigation';
 
 export default function App() {
   return (
-    <>
-      <SafeAreaView style={{ flex: 0, backgroundColor: "#FD6E58" }} />
-      <SafeAreaView style={{ flex: 1 }}>
-        <SearchScreen />
-      </SafeAreaView>
-    </>
+    <Navigation/>
   );
 }

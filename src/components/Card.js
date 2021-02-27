@@ -1,47 +1,42 @@
-import { TouchableHighlight, View } from "react-native";
-
 import React from "react";
-import { Text, StyleSheet, Image } from "react-native";
-// import { Rating } from "react-native-elements";
+import { Text, StyleSheet, Image, TouchableHighlight, View } from "react-native";
+import { Rating } from "react-native-elements";
 
-export const Card = ({ movie }) => {
+export const Card = ({ movie, itemClicked }) => {
   return (
     <TouchableHighlight
-      onPress={() => alert("pressed!")}
+      onPress={() => itemClicked(movie.id)}
       activeOpacity={0.6}
       underlayColor={"#fff"}
     >
       <View style={styles.main_container}>
         <View style={styles.image}>
-          {movie.poster_path ? (
-            <Image
-              style={styles.movieImage}
-              resizeMode={"contain"}
-              source={{
-                uri: `https://image.tmdb.org/t/p/original${movie.poster_path}`,
-              }}
-            ></Image>
-          ) : (
-            <Image
-              style={styles.movieImage}
-              resizeMode={"contain"}
-              source={{
-                uri: `http://cvestavayer.ch/wp-content/uploads/2020/01/CLUB_No_picture_available.png`,
-              }}
-            ></Image>
+          {
+            movie.poster_path ? (
+              <Image
+                style={styles.movieImage}
+                resizeMode={"contain"}
+                source={{ uri: `https://image.tmdb.org/t/p/original${movie.poster_path}` }}
+              />
+            ) : (
+              <Image
+                style={styles.movieImage}
+                resizeMode={"contain"}
+                source={{ uri: `http://cvestavayer.ch/wp-content/uploads/2020/01/CLUB_No_picture_available.png` }}
+              />
           )}
         </View>
         <View style={styles.desc}>
-          <Text style={styles.movieTitle}>{movie.original_title}</Text>
+          <Text style={styles.movieTitle}>{movie.title}</Text>
           <Text style={styles.releaseDate}>{movie.release_date}</Text>
-          {/* <Rating
-            type="heart"
-            readonly={true}
-            ratingCount={5}
-            startingValue={movie.vote_average / 2}
+          <Text style={styles.releaseDate}>Rating: {movie.vote_average}</Text>
+          <Rating
+            type='heart'
             imageSize={25}
-            style={{ paddingVertical: 5 }}
-          /> */}
+            readonly
+            startingValue={movie.vote_average / 2}
+            style={styles.rating}
+          />
         </View>
       </View>
     </TouchableHighlight>
@@ -85,5 +80,9 @@ const styles = StyleSheet.create({
   iconStar: {
     color: "#fff",
     marginTop: 7,
+  },
+  rating: {
+    flex: 1,
+    marginTop: 8,
   },
 });
